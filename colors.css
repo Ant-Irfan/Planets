@@ -1,0 +1,161 @@
+
+#Mercury .states-container-item.active  {
+    border-bottom: 3px solid #419EBB;
+ } 
+ #Venus .states-container-item.active  {
+    border-bottom: 3px solid #EDA249;
+ }
+ #Earth .states-container-item.active  {
+    border-bottom: 3px solid #6f2ed6;
+ }
+ #Mars .states-container-item.active  {
+    border-bottom: 3px solid #D14C32;
+ }
+ #Jupiter .states-container-item.active  {
+    border-bottom: 3px solid #D83A34;
+ }
+ #Saturn .states-container-item.active  {
+    border-bottom: 3px solid #CD5120;
+ }
+ #Uranus .states-container-item.active  {
+    border-bottom: 3px solid #1ec2a4;
+ }
+ #Neptune .states-container-item.active  {
+    border-bottom: 3px solid #2d68f0;
+ }
+
+ #Mercury .planet-image {
+    height: 111px;
+    width: 111px;
+ }
+ #Venus .planet-image {
+    height: 154px;
+    width: 154px;
+ }
+ #Earth .planet-image {
+    height: 173px;
+    width: 173px;
+ }
+ #Mars .planet-image {
+    height: 129px;
+    width: 129px;
+ }
+ #Jupiter .planet-image {
+    height: 224px;
+    width: 224px;
+ }
+ #Saturn .planet-image {
+    height: 256px;
+    width: 256px;
+ }
+ #Uranus .planet-image {
+    height: 176px;
+    width: 176px;
+ }
+ #Neptune .planet-image {
+    height: 173px;
+    width: 173px;
+ }
+ 
+ @media (min-width: 768px) { 
+    #Mercury .states-container-item.active  {
+        background-color: #419EBB;
+        border-bottom: none;
+    }
+    #Mercury .states-container-item.active  {
+        background-color: #419EBB;
+        border-bottom: none;
+    }
+    #Venus .states-container-item.active  {
+        background-color: #EDA249;
+        border-bottom: none;
+    }
+    #Earth .states-container-item.active  {
+        background-color: #6f2ed6;
+        border-bottom: none;
+    }
+    #Mars .states-container-item.active  {
+        background-color: #D14C32;
+        border-bottom: none;
+    }
+    #Jupiter .states-container-item.active  {
+        background-color: #D83A34;
+        border-bottom: none;
+    }
+    #Saturn .states-container-item.active  {
+        background-color: #CD5120;
+        border-bottom: none;
+    }
+    #Uranus .states-container-item.active  {
+        background-color: #1ec2a4;
+        border-bottom: none;
+    }
+    #Neptune .states-container-item.active  {
+        background-color: #2d68f0;
+        border-bottom: none;
+    }
+
+    #Mercury .planet-image {
+        height: 184px;
+        width: 184px;
+     }
+     #Venus .planet-image {
+        height: 253px;
+        width: 253px;
+     }
+     #Earth .planet-image {
+        height: 285px;
+        width: 285px;
+     }
+     #Mars .planet-image {
+        height: 213px;
+        width: 213px;
+     }
+     #Jupiter .planet-image {
+        height: 369px;
+        width: 369px;
+     }
+     #Saturn .planet-image {
+        height: 422px;
+        width: 422px;
+     }
+     #Uranus .planet-image {
+        height: 290px;
+        width: 290px;
+     }
+     #Neptune .planet-image {
+        height: 285px;
+        width: 285px;
+     }
+ }
+
+ @media (min-width: 1024px) {
+    #Mercury .planet-title.active  {
+        border-top: 3px solid #419EBB;
+    }
+    #Venus .planet-title.active  {
+        border-top: 3px solid #EDA249;
+    }
+    #Earth .planet-title.active  {
+        border-top: 3px solid #6f2ed6;
+    }
+    #Mars .planet-title.active  {
+        border-top: 3px solid #D14C32;
+    }
+    #Jupiter .planet-title.active  {
+        border-top: 3px solid #D83A34;
+    }
+    #Saturn .planet-title.active  {
+        border-top: 3px solid #CD5120;
+    }
+    #Uranus .planet-title.active  {
+        border-top: 3px solid #1ec2a4;
+    }
+    #Neptune .planet-title.active  {
+        border-top: 3px solid #2d68f0;
+    }
+    .planet-image {
+        width: auto !important;
+        height: auto !important;
+    }
+ }

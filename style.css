@@ -1,0 +1,453 @@
+* {
+    box-sizing: border-box;
+}
+
+ul, h1, h2  {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+	background: none;
+	color: inherit;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+    border: none;
+}
+
+.container-wrapper {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url('./assets/background-stars.svg') #070724;
+    color: #ffffff;
+    font-family: 'Antonio', sans-serif;
+}
+
+.container {
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    text-transform: uppercase;
+}
+
+.nav-title {
+    font-size: 28px;
+}
+
+.nav-items-container, .state-number {
+    display: none;
+}
+
+.nav-items-container.active {
+    position: fixed;
+    left: 0;
+    top: 80px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #070724;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1.36px;
+    cursor: pointer;
+}
+
+.nav-item:last-child {
+    border-bottom: none;
+}
+
+.planet-color-title-container {
+    display: flex;
+    align-items: center;
+}
+
+.planet-color {
+    display: block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.planet-title {
+    margin: 0px 0px 0px 20px;
+    cursor: pointer;
+}
+
+.mobile-menu-button.active {
+    filter: invert(54%) sepia(8%) saturate(410%) hue-rotate(202deg) brightness(95%) contrast(95%);
+}
+
+.planet-color.mercury{ background-color: #419EBB;}
+.planet-color.venus{ background-color: #EDA249;}
+.planet-color.earth{ background-color: #6f2ed6;}
+.planet-color.mars{ background-color: #D14C32;}
+.planet-color.jupiter{ background-color: #D83A34;}
+.planet-color.saturn{ background-color: #CD5120;}
+.planet-color.uranus{ background-color: #1ec2a4;}
+.planet-color.neptun{ background-color: #2d68f0;}
+
+.planets-grid-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-areas: "planet-state"
+                         "planet-image"
+                         "planet-info";
+}
+planet-image { grid-area: planet-image;}
+planet-state { grid-area: planet-state;}
+planet-areas { grid-area: planet-areas;}
+
+.planet-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    min-height: 250px;
+}
+.planet-image-internal {
+    width: calc(163px / 3);
+    height: calc(199px / 3);
+    position: relative;
+    bottom: 30px;
+    margin-bottom: calc(-199px / 3);
+}
+#Jupiter .planet-image-internal {
+    bottom: 70px;
+}
+#Saturn .planet-image-internal {
+    bottom: 100px;
+}
+
+.planet-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+ }
+.planet-info-title {
+    font-size: 40px;
+    text-transform: uppercase;
+ }
+.planet-description {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-family: 'League Spartan', sans-serif;
+    line-height: 22px;
+    font-weight: 300;
+    min-height: 135px;
+ }
+ .planet-info-source {
+    font-family: 'League Spartan', sans-serif;
+    color: #838391;
+ }
+.planet-info-source a {
+    color: #838391;
+    font-weight: bold;
+ }
+
+.states-container {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    margin: 0 -25px;
+    padding: 0 25px;
+}
+.states-container-item {
+   padding: 15px 5px;
+   border-bottom: 4px solid transparent;
+   display: flex;
+   text-transform: uppercase;
+   letter-spacing: 1.8px;
+   font-size: 10px;
+   color: #838391;
+   font-weight: 700;
+}
+ .states-container-item.active {
+    color: #ffffff;
+    border: none;
+ }
+
+ .state-number {
+     padding: 0 15px 0px 0px;
+     color: #ffffff;
+     opacity: 0.5;
+ }
+ #structure-button .state-name::after {
+    content: 'Structure';
+ }
+ #surface-button .state-name::after {
+    content: 'Surface';
+ }
+
+ .planet-box-container {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0px 40px 0px;
+}
+.planet-box {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 20px;
+   margin-bottom: 10px;
+   border: 1px solid rgba(255, 255, 255, .2);
+   text-transform: uppercase;
+}
+.planet-box-title {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #838391;
+}
+.planet-box-values {
+    font-size: 20px;
+}
+
+@media (min-width: 768px) {
+    .container-wrapper {
+        justify-content: space-between;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        padding: 30px 0px 0px;
+    }
+    .nav-items-container {
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .nav-item {
+        border-bottom: none;
+        color: white;
+        font-size: 12px;
+        padding: 20px 15px;
+    }
+    .planet-title {
+        margin: 0px;
+    }
+    .nav-item-arrow, .planet-color, .mobile-menu-button {
+        display: none;
+    }
+
+    .planets-grid-container {
+        grid-template-areas: "planet-image planet-image"
+                             "planet-info planet-state";
+                             grid-template-columns: 1fr 1fr; 
+                             align-items: center;
+                             grid-column-gap: 70px;
+    }
+
+    .planet-image-internal {
+        width: calc(163px / 2);
+        height: calc(199px / 2);
+        position: relative;
+        bottom: 70px;
+        margin-bottom: calc(-199px / 2);
+    }
+    #Saturn .planet-image-internal {
+        bottom: 150px;
+    }
+    .planet-image-container {
+        min-height: 440px;
+    }
+
+    .planet-info-container {
+        text-align: left;
+        align-items: flex-start;
+        margin-bottom: 25px;
+    }
+    .planet-box-values {
+        font-size: 24px;
+    }
+
+    .states-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        border-bottom: none;
+        margin: 0;
+        padding: 0;
+    }
+    .states-container-item {
+        padding: 15px 0px;
+        border: 1px solid rgba(255, 255, 255, .2);
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+    .states-container-item.active {
+        border: 1px solid transparent;
+     }
+    .states-container-item:last-child {
+        margin-bottom: 0;
+    }
+    .states-container-item:hover {
+        background-color: #38384F;
+    }
+    #structure-button .state-name::after {
+        content: 'Internal Structure';
+     }
+     #surface-button .state-name::after {
+        content: 'Surface Geology';
+     }
+    .state-number {
+        display: block;
+        padding: 0 15px;
+    }
+
+    .planet-box-container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: auto;
+    }
+    .planet-box {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 25%;
+        padding: 20px;
+        margin-bottom: 0;
+    }
+    .planet-box-title {
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    
+    .nav-container {
+        flex-direction: row;
+        padding: 0px 30px;
+    }
+    .nav-items-container {
+        display: flex;
+        padding-top: 0;
+        padding-bottom: 0;
+        justify-content: flex-end;
+        width: auto;
+    }
+    .nav-item {
+        padding-top: 0;
+        cursor: auto;
+    }
+    .planet-title {
+        padding-top: 28px;
+        border-top: 3px solid transparent;
+        font-size: 14px;
+        color: white;
+        opacity: 0.5;
+    }
+    .planet-title.active {
+        color: white;
+        border-top: 3px solid #419EBB;
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .planets-grid-container {
+        grid-template-areas: "planet-image planet-info"
+                             "planet-image planet-state";
+                             grid-template-columns: 2fr 1fr; 
+        column-gap: 0;
+        row-gap: 40px;
+    }
+    planet-info {
+        margin-top: auto;
+    }
+    planet-state {
+        margin-bottom: auto;
+    }
+    .planet-image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px 0px;
+        min-height: 700px;
+    }
+    .planet-image-internal {
+        width: 163px;
+        height: 199px;
+        position: relative;
+        bottom: 70px;
+        margin-bottom: -199px;
+    }
+    #Venus .planet-image-internal {
+        bottom: 100px;
+    }
+    #Earth .planet-image-internal {
+        bottom: 150px;
+    }
+    #Jupiter .planet-image-internal {
+        bottom: 210px;
+    }
+    #Saturn .planet-image-internal {
+        bottom: 250px;
+    }
+    #Uranus .planet-image-internal {
+        bottom: 120px;
+    }
+    #Neptune .planet-image-internal {
+        bottom: 120px;
+    }
+    
+    .planet-info-container {
+        margin-bottom: 0px;
+    }
+
+    .states-container-item {
+        font-family: 'League Spartan', sans-serif;
+        font-size: 12px;
+        letter-spacing: 2.5px;
+        font-weight:  700;
+     }
+
+    .planet-info-title {
+        font-size: 80px;
+     }
+    .planet-description {
+        margin-bottom: 20px;
+    }
+    .planet-box-container {
+        margin: auto 0 50px 0px;
+    }
+    .planet-box-values {
+        font-size: 32px;
+    }
+}
+
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+    .planet-box-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
