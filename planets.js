@@ -1,4 +1,4 @@
-export const Planets = [
+const Planets = [
     {
       "name": "Mercury",
       "overview": {
@@ -192,3 +192,6 @@ export const Planets = [
       }
     }
   ]
+export {
+    Planets
+};

@@ -1,4 +1,4 @@
-import Planets from './data.json'  assert { type: 'json' };
+import { Planets }  from './planets.js';
 
 const bodyElement = document.querySelector('body');
 const hamburgerMenu = document.querySelector('.mobile-menu-button');
